@@ -1,15 +1,59 @@
+//Create slider for item Project 1
 var splide = new Splide(".splide", {
-    type: "loop",
-    autoplay: "play",
+    type: "loop",//loop infinite
+    autoplay: "play",//auto translate current slider
+    gap: 50,//create space between slides
 });
+
 var bar = splide.root.querySelector(".my-carousel-progress-bar");
+// Updates the bar width whenever the carousel moves:
+splide.on("mounted move", function () {
+    var end = splide.Components.Controller.getEnd() + 1;
+    var rate = Math.min((splide.index + 1) / end, 1);
+    bar.style.width = String(100 * rate) + "%";
+});
+//Render slider on screen
+splide.mount();
+
+//Create slider for item Project 2
+var splide2 = new Splide(".splideItem2", {
+    type: "loop",//loop infinite
+    autoplay: "play",//auto translate current slider
+    gap: 50,//create space between slides
+});
+// Updates the bar width whenever the carousel moves:
+var bar2 = splide2.root.querySelector(".my-carousel-progress-bar-2");
+splide2.on("mounted move", function () {
+    var end = splide2.Components.Controller.getEnd() + 1;
+    var rate = Math.min((splide2.index + 1) / end, 1);
+    bar2.style.width = String(100 * rate) + "%";
+});
+splide2.mount();//Render slider on screen
 
 
-let content = document.querySelectorAll('.nav-link');
+//Create tab toggle
+let content = document.querySelectorAll('#pills-tab .nav-link');
+let content2 = document.querySelectorAll('#pills-tab-2 .nav-link');
 
 content.forEach(data => {
     data.addEventListener('click', function(e){
-        let allContent = document.querySelectorAll('.tab-content .tab-pane');
+        let allContent = document.querySelectorAll('#pills-tabContent.tab-content .tab-pane');
+        let id = data.getAttribute('id');
+        allContent.forEach(item => {
+            if(item.getAttribute('aria-labelledby') == id){
+                item.classList.add('show')
+                item.classList.add('active')
+            }
+            else{
+                item.classList.remove('show')
+                item.classList.remove('active')
+            }
+        })
+    })
+})
+content2.forEach(data => {
+    data.addEventListener('click', function(e){
+        let allContent = document.querySelectorAll('#pills-tabContent-2.tab-content .tab-pane');
         let id = data.getAttribute('id');
         allContent.forEach(item => {
             if(item.getAttribute('aria-labelledby') == id){
@@ -24,15 +68,6 @@ content.forEach(data => {
     })
 })
 
-
-// Updates the bar width whenever the carousel moves:
-splide.on("mounted move", function () {
-    var end = splide.Components.Controller.getEnd() + 1;
-    var rate = Math.min((splide.index + 1) / end, 1);
-    bar.style.width = String(100 * rate) + "%";
-});
-
-splide.mount();
 //-----------------------------------------------------------------------
 //Show tab slider
 const getlengthId = document.querySelectorAll(".btn-nmhp-parent");
