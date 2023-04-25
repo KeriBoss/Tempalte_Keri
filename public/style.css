@@ -20,9 +20,11 @@
 .heading{
     font-size: 2em;
     font-family: inherit;
-    font-weight: 600;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
     text-transform: uppercase;
+}
+.heading h2{
+    font-weight: 800;
 }
 .d-content-project{
     width: 100%;
@@ -31,7 +33,7 @@
 .general .splide__slide{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
     flex-wrap: wrap;
     font-family: inherit;
@@ -83,7 +85,16 @@
 .sliderTabNew{
     font-size: 20px;
 }
+
+.general .splide__slide .nav-item .icon-tab{
+    font-size: 2rem;
+    color: black;
+    display: none;
+}
 @media (max-width: 414.98px) {
+    .general .splide__slide{
+        gap: 0;
+    }
     .sliderTabNew .nav-tabs li{
         font-size: .7em;
     }
@@ -102,6 +113,21 @@
     .heading h2{
         font-size: 1.1em!important;
     }
+    .general .nav.nav-pills{
+        width: 100%;
+    }
+    .general .nav.nav-pills .nav-item{
+        width: 33.33%;
+    }
+    .general .splide__slide .nav-item .icon-tab{
+        display: block;
+    }
+    .general .splide__slide .nav-item .tlt{
+        display: none;
+    }
+}
+@media (max-width: 820px) {
+
 }
 @media (max-width: 1199.98px) {
     .general .splide__slide .content{

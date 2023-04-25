@@ -98,3 +98,26 @@ $(document).ready(function() {
         fixedContentPos: false
     });
 });
+
+//--------------------------------------------------------//
+let slider = document.querySelectorAll('.splide__slide .tab-content video');
+
+
+window.addEventListener('scroll', function(){
+    slider.forEach((item,index) => {
+        let rect = item.getBoundingClientRect();
+        
+        if(rect.top.toFixed() - this.window.innerHeight > -this.window.innerHeight && rect.top.toFixed() < this.window.innerHeight){
+            item.muted = true;
+            item.autoplay = true;
+            item.controls = true;
+            item.pause = false;
+        }
+        else{
+            item.muted = false;
+            item.autoplay = false;
+            item.controls = false;
+            item.pause = true;
+        }
+    })
+})
