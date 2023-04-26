@@ -100,8 +100,9 @@
 	</style>
 	<style data-emotion="default-ltr-cache 179t5g5" data-s="">
 		.default-ltr-cache-179t5g5 {
-			position: relative;
-			z-index: 1;
+			position: sticky;
+			top: 0%;
+			z-index: 2;
 		}
 	</style>
 	<style data-emotion="default-ltr-cache 1qlqpav" data-s="">
@@ -131,6 +132,19 @@
 			position: absolute;
 			left: 0;
 			right: 0;
+		}
+		.default-ltr-cache-nuk28u.sticky{
+			padding: 10px;
+			border-bottom-left-radius: 7px;
+			border-bottom-right-radius: 7px;
+			background: #fff;
+			transition: all .5s;
+		}
+		.default-ltr-cache-nuk28u.sticky .text-white{
+			color: #000!important;
+		}
+		.default-ltr-cache-nuk28u.sticky ul.social li a{
+			color: black;
 		}
 
 		@media screen and (min-width: 600px) {
@@ -2486,10 +2500,17 @@
 			padding: 2.5rem 0;
 		}
 
+		@media screen and (max-width: 414.98px) {
+			.default-ltr-cache-dm6jit {
+				min-height: auto;
+				padding: 1.5rem 0;
+			}
+		}
+
 		@media screen and (min-width: 600px) {
 			.default-ltr-cache-dm6jit {
 				min-height: auto;
-				padding: 2.5rem 0;
+				padding: 1.5rem 0;
 			}
 		}
 
@@ -3702,7 +3723,7 @@
 											<a href="./index.html" class="logo">Keri</a>
 										</span>
 										<span
-											class="default-ltr-cache-b6fby2 e1l8klum0">
+											class="default-ltr-cache-b6fby2 future e1l8klum0">
 											<div data-uia="language-picker-header+container"
 												class="e4lanwg1 default-ltr-cache-11x5bv4 ea3diy34">
 												<label for="19a810ac70307" data-uia="language-picker-header+label"
@@ -3728,11 +3749,38 @@
 											</div>
 										</span>
 										<span class="default-ltr-cache-1mms6ov eai9cxb0">
-											<div class="d-block">
+											<div class="service-orther">
 												<a  href="./service.html"
 													class="bg-transparent text-white py-1 px-3 rounded">
 													Dịch vụ khác
 												</a>
+											</div>
+											<div class="icon-orther"><a href="./service.html"><i class='bx bx-dots-horizontal'></i></a></div>
+										</span>
+										<span class="default-ltr-cache-1mms6ov eai9cxb0">
+											<div class="d-block">
+												<ul class="social">
+													<li>
+														<a href="#">
+															<i class='bx bxl-facebook-circle'></i>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<i class='bx bxl-instagram' ></i>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<i class='bx bxl-github' ></i>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<i class='bx bxl-youtube' ></i>
+														</a>
+													</li>
+												</ul>
 											</div>
 										</span>
 										<!-- <span class="default-ltr-cache-1mms6ov eai9cxb0">
@@ -3906,7 +3954,7 @@
 																			<a class="active"
 																			data-toggle="modal" data-target="#popupAddCart"
 																			>
-																				<video id="autoplay" width="100%" height="100%" >
+																				<video id="autoplay" width="100%" height="100%" muted>
 																					<source src="./Netflix Việt Nam – Xem chương trình truyền hình trực tuyến, Xem phim trực tuyến_files/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
 																				</video>
 																			</a>
@@ -3997,7 +4045,7 @@
 																			aria-labelledby="pills-home-tab">
 																			<a class="active"
 																			data-toggle="modal" data-target="#popupAddCart">
-																				<video id="autoplay" width="100%" height="100%">
+																				<video id="autoplay" width="100%" height="100%" muted>
 																					<source src="./Netflix Việt Nam – Xem chương trình truyền hình trực tuyến, Xem phim trực tuyến_files/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
 																				</video></a>
 																		</div>
@@ -4104,7 +4152,7 @@
 																			aria-labelledby="tab-project-pill-2">
 																			<a class="active" data-toggle="modal" data-target="#popupAddCart"
 																				>
-																				<video id="autoplay" width="100%" height="100%">
+																				<video id="autoplay" width="100%" height="100%" muted>
 																					<source src="./Netflix Việt Nam – Xem chương trình truyền hình trực tuyến, Xem phim trực tuyến_files/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
 																				</video></a>
 																		</div>
@@ -4194,7 +4242,7 @@
 																			id="tab-project-2" role="tabpanel"
 																			aria-labelledby="tab-project-pill-2">
 																			<a class="active" target="_blank"
-																				href="file:///F:/webmau/webmau/51%20hotelier-1.0.0/Yenvina/index.html"><video id="autoplay" width="100%" height="100%" playsinline>
+																				href="file:///F:/webmau/webmau/51%20hotelier-1.0.0/Yenvina/index.html"><video id="autoplay" width="100%" height="100%"  muted>
 																					<source src="./Netflix Việt Nam – Xem chương trình truyền hình trực tuyến, Xem phim trực tuyến_files/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
 																				</video></a>
 																		</div>
@@ -4250,7 +4298,7 @@
 																	class="btn-nmhp-parent btn-nmhp-0 elj7tfr0 default-ltr-cache-1t6kzr4"
 																	type="button">
 																	<span
-																		data-uia="nmhp-card-faq-accordion+what_is_netflix">Keri
+																		data-uia="nmhp-card-faq-accordion+what_is_netflix">1. Keri
 																		là gì?</span><svg width="24" height="24"
 																		viewBox="0 0 24 24" fill="none"
 																		xmlns="http://www.w3.org/2000/svg"
@@ -4535,32 +4583,6 @@
 													<li class="default-ltr-cache-944709 egqqkjj0">
 														<a role="link" data-uia="footer-link"
 															class="default-ltr-cache-17c2btp"
-															href="https://www.netflix.com/youraccount">Tài khoản</a>
-													</li>
-													<li class="default-ltr-cache-944709 egqqkjj0">
-														<a role="link" data-uia="footer-link"
-															class="default-ltr-cache-17c2btp"
-															href="https://media.netflix.com/">Trung tâm đa phương
-															tiện</a>
-													</li>
-													<li class="default-ltr-cache-944709 egqqkjj0">
-														<a role="link" data-uia="footer-link"
-															class="default-ltr-cache-17c2btp"
-															href="http://ir.netflix.com/">Quan hệ với nhà đầu tư</a>
-													</li>
-													<li class="default-ltr-cache-944709 egqqkjj0">
-														<a role="link" data-uia="footer-link"
-															class="default-ltr-cache-17c2btp"
-															href="https://jobs.netflix.com/jobs">Việc làm</a>
-													</li>
-													<li class="default-ltr-cache-944709 egqqkjj0">
-														<a role="link" data-uia="footer-link"
-															class="default-ltr-cache-17c2btp"
-															href="https://www.netflix.com/watch">Các cách xem</a>
-													</li>
-													<li class="default-ltr-cache-944709 egqqkjj0">
-														<a role="link" data-uia="footer-link"
-															class="default-ltr-cache-17c2btp"
 															href="https://help.netflix.com/legal/termsofuse">Điều khoản
 															sử dụng</a>
 													</li>
@@ -4569,11 +4591,6 @@
 															class="default-ltr-cache-17c2btp"
 															href="https://help.netflix.com/legal/privacy">Quyền riêng
 															tư</a>
-													</li>
-													<li class="default-ltr-cache-944709 egqqkjj0">
-														<a role="link" data-uia="footer-link"
-															class="default-ltr-cache-17c2btp"
-															href="https://www.netflix.com/vn/#">Tùy chọn cookie</a>
 													</li>
 													<li class="default-ltr-cache-944709 egqqkjj0">
 														<a role="link" data-uia="footer-link"
@@ -4590,19 +4607,8 @@
 													<li class="default-ltr-cache-944709 egqqkjj0">
 														<a role="link" data-uia="footer-link"
 															class="default-ltr-cache-17c2btp"
-															href="https://fast.com/">Kiểm tra tốc độ</a>
-													</li>
-													<li class="default-ltr-cache-944709 egqqkjj0">
-														<a role="link" data-uia="footer-link"
-															class="default-ltr-cache-17c2btp"
 															href="https://help.netflix.com/legal/notices">Thông báo pháp
 															lý</a>
-													</li>
-													<li class="default-ltr-cache-944709 egqqkjj0">
-														<a role="link" data-uia="footer-link"
-															class="default-ltr-cache-17c2btp"
-															href="https://www.netflix.com/vn/browse/genre/839338">Chỉ có
-															trên Netflix</a>
 													</li>
 												</ul>
 											</div>
@@ -4733,7 +4739,7 @@
 											</div>
 										</div>
 										<p data-style="brandLocation" class="default-ltr-cache-19np76c">
-											Netflix Việt Nam
+											Keri Việt Nam
 										</p>
 									</div>
 								</footer>

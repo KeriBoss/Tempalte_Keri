@@ -101,23 +101,55 @@ $(document).ready(function() {
 
 //--------------------------------------------------------//
 let slider = document.querySelectorAll('.splide__slide .tab-content video');
+let header = document.querySelector('.default-ltr-cache-nuk28u');
+const bodyWeb = document.querySelector('body');
 
+let offset = window.pageYOffset
+var prevScroll = window.pageYOffset;
 
-window.addEventListener('scroll', function(){
-    slider.forEach((item,index) => {
+window.addEventListener('scroll', function(event){
+    slider.forEach((item) => {
         let rect = item.getBoundingClientRect();
         
-        if(rect.top.toFixed() - this.window.innerHeight > -this.window.innerHeight && rect.top.toFixed() < this.window.innerHeight){
-            item.muted = true;
-            item.autoplay = true;
+        if(rect.top.toFixed() - this.window.innerHeight > -this.window.innerHeight && rect.top.toFixed() < this.window.innerHeight - 300){
             item.controls = true;
-            item.pause = false;
+            item.play();
         }
         else{
-            item.muted = false;
-            item.autoplay = false;
             item.controls = false;
-            item.pause = true;
+            item.pause();
         }
-    })
+    });
+
+    // let rectHeader = bodyWeb.getBoundingClientRect();
+    // if(rectHeader.top.toFixed() < 0){
+    //     header.classList.add('sticky')
+    // }else{
+    //     header.classList.remove('sticky')
+    // }
+
+
+
+    offset = window.pageYOffset
+    offset > 0 ?
+        header.classList.add('sticky') : header.classList.remove('sticky')
+    var currentScroll = window.pageYOffset;
+    if(prevScroll > currentScroll){
+        header.style.top = '0';
+        offset > 0 ?
+            header.classList.add('sticky') : header.classList.remove('sticky')
+    }
+    else{
+        header.style.top = '-90px'
+    }
+    prevScroll = currentScroll;
+    
+})
+window.addEventListener('load',function(){
+    let rectHeader = bodyWeb.getBoundingClientRect();
+    if(rectHeader.top.toFixed() < 0){
+        header.classList.add('sticky')
+    }else{
+        header.classList.remove('sticky')
+    }
 })
