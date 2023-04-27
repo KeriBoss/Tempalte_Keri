@@ -65,15 +65,30 @@ header .default-ltr-cache-1mms6ov .icon-orther{
     font-family: inherit;
     height: 100%;
 }
-.splide__arrow--prev{
+.general .splide__arrow--prev{
     left: -2em;
 }
-.splide__arrow--next{
+.general .splide__arrow--next{
     right: -2em;
 }
+.splideImg .splide__arrow--prev,
+.splideImg .splide__arrow--next{
+    border-radius: 0;
+    background: var(--dark);
+}
+.splideImg .splide__arrow--prev svg,
+.splideImg .splide__arrow--next svg{
+    fill: #fff;
+}
+.splideImg .splide__arrow--prev{
+    left: 0;
+}
+.splideImg .splide__arrow--next{
+    right: 0em;
+}
 .general .splide__slide .sliderTabNew{
-    width: 60%;
-    max-width: 60%;
+    width: 100%;
+    max-width: 100%;
     position: relative;
 }
 
@@ -88,8 +103,8 @@ header .default-ltr-cache-1mms6ov .icon-orther{
     max-height: 400px;
 }
 .general .splide__slide .content{
-    width: calc(40% - 50px);
-    max-width: calc(40% - 50px);
+    width: 100%;
+    max-width: 100%;
     text-align: left;
 }
 .general .splide__slide .content .title{
@@ -284,4 +299,22 @@ Google translate
     .modal-content{
         height: max-content;
     }
+}
+.splideImg ul li.splide__slide img{
+    width: 100%;
+    object-fit: cover;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+    width: 50px;
+    height: 50px;
+    background: rgb(0, 0, 0, .7);
+    color: #fff;
+    font-size: 2em;
+    position: relative;
+}
+.owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
 }

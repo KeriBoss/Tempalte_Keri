@@ -1,6 +1,5 @@
 //Create slider for item Project 1
-var splide = new Splide(".splide", {
-    type: "loop",//loop infinite
+var splide = new Splide(".splideItem1", {
     autoplay: "play",//auto translate current slider
     gap: 50,//create space between slides
 });
@@ -17,7 +16,6 @@ splide.mount();
 
 //Create slider for item Project 2
 var splide2 = new Splide(".splideItem2", {
-    type: "loop",//loop infinite
     autoplay: "play",//auto translate current slider
     gap: 50,//create space between slides
 });
@@ -29,6 +27,8 @@ splide2.on("mounted move", function () {
     bar2.style.width = String(100 * rate) + "%";
 });
 splide2.mount();//Render slider on screen
+
+//
 
 
 //Create tab toggle
